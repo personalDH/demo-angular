@@ -1,14 +1,15 @@
 {
   "name": "demo-deploy",
   "version": "0.0.0",
-  "main": "web.js",
   "scripts": {
     "ng": "ng",
+    "start": "ng serve",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "postinstall": "ng build --aot -prod"
+    "preinstall": "npm install -g @angular/cli @angular/compiler-cli typescript",
+    "postinstall": "ng build --prod"
   },
   "private": true,
   "dependencies": {
